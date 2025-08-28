@@ -1,0 +1,180 @@
+ body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fb;
+      scroll-behavior: smooth;
+    }
+
+   /* head1 */
+   .head1{
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+     text-align: center;
+     padding-bottom: 10px;
+   }
+   .fhead{
+    text-align: left;
+    color: #3a6ea5;
+    display: flex;
+    justify-content:right;
+    margin-left: 35%;
+   }
+   .btn1{
+      background:  #3a6ea5;;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+   }
+   .btn1 a{
+    text-decoration: none;
+     color: white;
+      font-size: 15px;
+   }
+    button.btn1:hover {
+      background: #7e85e4;
+    }
+    /* 🔹 Navbar */
+    nav {
+      background: #1e3d59;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav h1 {
+      color: #fff;
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    nav ul li a:hover {
+      background: #3a6ea5;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, #1e3d59, #3a6ea5);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    /* Section */
+    section {
+      width: 75%;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1e3d59;
+    }
+    
+
+    /*  Form */
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 14px 20px;
+      background: #1e3d59;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #3a6ea5;
+    }
+
+    /*Resource & FAQ cards */
+    .card {
+      background: #f4f6f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      color: #1e3d59;
+    }
+
+    /*Footer */
+    footer {
+  background: #1e3d59;
+  color: white;
+  padding: 15px 40px;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  margin-left: 20px;
+}
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}

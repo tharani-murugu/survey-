@@ -1,0 +1,218 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Spoken Enlish class</h1>
+    <p>Noun+verb</p>
+    <ol><li>noun is a names</li>
+        <li>verb is a actions</li>
+    </ol>
+</body>
+<script src="script.js">
+</script>
+    
+<script>
+    //alert("this is alert");
+    let input;
+    input = prompt("Your name is ?","CAPITAL LETTER");
+    console.log(input);
+    let input1;
+    input = confirm("your name is correct ?")
+    console.log(input);
+
+    
+    
+</script> 
+
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+!-- form 
+    <h1>Bio Data form</h1>
+    <label>Full Name : </label>
+    <input id="name"><br><br>
+    <label>Date Of Birth : </label>
+    <input id="dob"><br><br>   
+    <label>Mail id :</label>
+    <input id="mail"><br><br>
+    <label>Mobile No :</label>
+    <input id="no"><br><br>
+
+    <button onclick="Bdata()" style="padding: 6px;width: 100px;">Submit</button><br><br>
+    <button onclick="ADD()" style="padding: 6px;width: 100px;">Add data</button><br><br> -->
+
+    <!-- table -->
+    
+<!--     <table>
+        <tr>
+            <th>Full Name</th>
+            <th>Date Of Birth</th>
+            <th>Mail id</th>
+            <th>Moblie No</th>
+        </tr>
+        <tr>
+            <td id="n"></td>
+            <td id="d"></td>
+            <td id="m"></td>
+            <td id="n1"></td>
+        </tr>
+    </table>
+ 
+    
+</body>
+<script>
+   
+    function Bdata(){
+        let Full_Name=(document.getElementById("name").value);
+        let Date_Of_Birth=(document.getElementById("dob").value);
+        let Mail_id=(document.getElementById("mail").value);
+        let Moble_No=(document.getElementById("no").value);
+        
+        document.getElementById("n").innerHTML=Full_Name;
+        document.getElementById("d").innerHTML=Date_Of_Birth;
+        document.getElementById("m").innerHTML=Mail_id;
+        document.getElementById("n1").innerHTML=Moble_No;
+
+    }
+    function ADD(){
+
+    }
+</script>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="header">
+        <h1 id="createy" class="create">Create your account</h1>
+        <p id="already" class="para">Already have an account ? <u onclick="Signin()">Sign In</u></p>
+    </div>
+    <div id="sn" class="signinv"></div>
+
+    <div id="signuppage" class="form">
+        <label>First Name :</label>
+        <input id="fname"><br><br>
+        <label>Last Name :</label>
+        <input id="lname"><br><br>
+        <label>Email  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+        <input id="Email"><br><br>
+        <label>Password  &nbsp;&nbsp;:</label>
+        <input id="Pword" type="password"><br><br>
+        <button style="padding: 5px;" onclick="account()" class="btnc"><strong>Create account</strong></button>
+    </div>
+</body>
+<script>
+   // store signup data
+   let storedUser = {};
+
+   function account() {
+       const First_Name = document.getElementById('fname').value.trim();
+       const Last_Name  = document.getElementById('lname').value.trim();
+       const Email      = document.getElementById('Email').value.trim();
+       const Password   = document.getElementById('Pword').value.trim();
+
+       if (!First_Name || !Last_Name || !Email || !Password) {
+           alert(" Please fill all fields!");
+           return;
+       }
+
+       // save user details
+       storedUser = { First_Name, Last_Name, Email, Password };
+       alert(" Account created successfully! Now click 'Sign In'.");
+
+       // optional: clear form
+       document.getElementById('fname').value = "";
+       document.getElementById('lname').value = "";
+       document.getElementById('Email').value = "";
+       document.getElementById('Pword').value = "";
+   }
+
+   let c = 0;
+   function Signin() {
+       c++;
+       if (c == 1) {
+           // hide signup UI
+           document.getElementById("signuppage").style.display = "none";
+           document.getElementById("createy").style.display = "none";
+           document.getElementById("already").style.display = "none";
+
+           // heading
+           const h2 = document.createElement('h2');
+           h2.textContent = "Sign In";
+           h2.setAttribute('class','signihead')
+           document.getElementById('sn').append(h2);
+
+           // back to signup link
+           const p = document.createElement('p');
+           p.textContent = `Don't have an account ? `;
+           const link = document.createElement('a');
+           link.textContent = "Register";
+           link.href = "index5.html";  
+           link.onclick = () => location.reload(); // reload back to signup
+           p.appendChild(link);
+           document.getElementById('sn').append(p);
+
+           // username (use Email as login)
+           const l1 = document.createElement('label');
+           l1.textContent = 'Email : ';
+           const username = document.createElement('input');
+           username.setAttribute('id','usernamei');
+           document.getElementById('sn').append(l1);
+           document.getElementById('sn').append(username);
+            //break tag
+           for(let i=0;i<2;i++){
+           document.getElementById('sn').append(document.createElement('br'));
+           }
+           // password
+           const l2 = document.createElement('label');
+           l2.textContent = 'Password : ';
+           const password = document.createElement('input');
+           password.setAttribute('type','password');
+           password.setAttribute('id','passwordi');
+           document.getElementById('sn').append(l2);
+           document.getElementById('sn').append(password);
+           //break tag
+           for(let i=0;i<2;i++){
+           document.getElementById('sn').append(document.createElement('br'));
+           }
+           
+
+           // Sign in button
+           const sign = document.createElement('button');
+           sign.textContent = 'Sign In';
+           sign.setAttribute('id', 'signinb');
+           sign.setAttribute('class','btnc');
+           sign.addEventListener('click', function () {
+               const userInput = document.getElementById('usernamei').value.trim();
+               const passInput = document.getElementById('passwordi').value.trim();
+
+               if (userInput === storedUser.Email && passInput === storedUser.Password) {
+                   alert("Login Successful! Welcome " + storedUser.First_Name);
+                   window.location.href = "survey.html";
+               } else {
+                   alert("Invalid Email or Password!");
+               }
+           });
+
+           document.getElementById('sn').append(sign);
+       }
+   }
+</script>
+</html>
